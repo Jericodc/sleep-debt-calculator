@@ -1,30 +1,17 @@
 const getSleepHours = day => {
-  switch (day) {
-    case 'monday':
-      return 8;
-      break;
-    case 'tuesday':
-      return 7;
-      break;
-    case 'wednesday':
-      return 6;
-      break;
-    case 'thursday':
-      return 8;
-      break;
-    case 'friday':
-      return 7;
-      break;
-    case 'saturday':
-      return 6;
-      break;
-    case 'sunday':
-      return 9;
-      break;
-  };
-};
+    const hours = {
+    Monday: 8,
+    Tuesday: 7,
+    Wednesday: 6,
+    Thursday: 8,
+    Friday: 7,
+    Saturday: 6,
+    Sunday: 9
+    };
+    return hours[day];
+  }
 
-const getActualSleepHours = () => getSleepHours('monday') + getSleepHours('tuesday') + getSleepHours('wednesday') + getSleepHours('thursday') + getSleepHours('friday') + getSleepHours('saturday') + getSleepHours('sunday');
+const getActualSleepHours = () => getSleepHours('Monday') + getSleepHours('Tuesday') + getSleepHours('Wednesday') + getSleepHours('Thursday') + getSleepHours('Friday') + getSleepHours('Saturday') + getSleepHours('Sunday');
 
 const getIdealSleepHours = idealHours => idealHours * 7;
 
